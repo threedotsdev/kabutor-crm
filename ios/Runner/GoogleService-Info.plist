@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>817551514717-p1f82a4jtivni4t0fapim7kqq0bugedu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.817551514717-p1f82a4jtivni4t0fapim7kqq0bugedu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDF4P2c0R1MwuHZBRx9BSXtWwL4q8P6ATg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>817551514717</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.oxsmic.kabutor</string>
+	<key>PROJECT_ID</key>
+	<string>kabutor-689cc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kabutor-689cc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:817551514717:ios:bde5fed6fc96b2a57d01b4</string>
+</dict>
+</plist>

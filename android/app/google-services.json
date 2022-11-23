@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "817551514717",
+    "project_id": "kabutor-689cc",
+    "storage_bucket": "kabutor-689cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817551514717:android:ac727e3f01445db87d01b4",
+        "android_client_info": {
+          "package_name": "com.oxsmic.kabutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817551514717-ecudn3o8mhilhp75fmpprgtqjjurdo04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOw2xHz2D-FvJ309sZ81vRBy-0ka6Cjmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817551514717-ecudn3o8mhilhp75fmpprgtqjjurdo04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
