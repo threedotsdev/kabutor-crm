@@ -1,6 +1,11 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:kabutor/ui/pages/onbroading/welcome.dart';
+
 import 'packages.dart';
 
 void main() async {
+  await ScreenUtil.ensureScreenSize();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -19,12 +24,13 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Kabutor',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+       home: const Welcome(),
+       debugShowCheckedModeBanner: false,
     );
   }
 }
