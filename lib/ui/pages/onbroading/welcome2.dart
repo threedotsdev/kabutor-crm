@@ -34,6 +34,7 @@ class Welcome2 extends StatelessWidget {
                     },
                   ),
                 ),
+                const Spacer(),
                 Image.asset('assets/images/city.png')
               ],
             ),
