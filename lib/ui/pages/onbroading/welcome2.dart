@@ -12,7 +12,7 @@ class Welcome2 extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: Get.height * 0.15),
-                Image.asset('assets/images/logo.png'),
+                KabutorLogo(),
                 SizedBox(height: Get.height * 0.05),
                 const Text(
                   'Welcome To',
