@@ -7,7 +7,7 @@ export 'package:get/get.dart';
 export 'package:google_fonts/google_fonts.dart';
 
 export 'utils/theme/palette.dart';
-export 'utils/theme/kabutor_logo.dart';
+export 'ui/shared/widgets/kabutor_logo.dart';
 export 'utils/constans.dart';
 export '/ui/shared/widgets/custom_button.dart';
 export 'ui/shared/widgets/Sscaffold_backgound.dart';

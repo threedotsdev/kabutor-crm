@@ -12,7 +12,7 @@ class Welcome2 extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: Get.height * 0.15),
-                KabutorLogo(),
+                const KabutorLogo(),
                 SizedBox(height: Get.height * 0.05),
                 const Text(
                   'Welcome To',
@@ -28,7 +28,7 @@ class Welcome2 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Button(
-                    text: "LET’S GET STARTED",
+                    text: "LET'S GET STARTED",
                     ontap: () {
                       Get.to(const SignIn());
                     },
