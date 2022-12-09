@@ -1,7 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:kabutor/ui/pages/auth/signin.dart';
-
 import '../../../packages.dart';
 
 class Welcome extends StatelessWidget {
@@ -35,7 +31,7 @@ class Welcome extends StatelessWidget {
             SizedBox(
               height: 149.h,
             ),
-            Container(
+            SizedBox(
               width: 269.w,
               height: 213.h,
               child: Image.asset('assets/images/logo.png'),
@@ -64,9 +60,14 @@ class Welcome extends StatelessWidget {
             SizedBox(
               height: 34.h,
             ),
-            Button(),
-            const SizedBox(
-              height: 20,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Button(
+                text: "LET’S GET STARTED",
+                ontap: () {
+                  Get.to(const SignIn());
+                },
+              ),
             ),
             SizedBox(
               width: 390.w,
@@ -79,4 +80,3 @@ class Welcome extends StatelessWidget {
     );
   }
 }
-

@@ -1,7 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:kabutor/ui/pages/onbroading/welcome.dart';
-
 import 'packages.dart';
 
 void main() async {
@@ -21,16 +17,19 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Kabutor',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Palette.themeColor,
+        ),
+        textTheme: GoogleFonts.latoTextTheme(),
       ),
-       home: const Welcome(),
-       debugShowCheckedModeBanner: false,
+      home: const Welcome2(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
