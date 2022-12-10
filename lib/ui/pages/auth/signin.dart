@@ -1,6 +1,4 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 import '../../../packages.dart';
 
@@ -91,7 +89,7 @@ class SignIn extends StatelessWidget {
                           offset: Offset(0, 4),
                         ),
                       ],
-                      color: Color(0xff00a784),
+                      color:const Color(0xff00a784),
                     ),
                     child: const Center(
                       child: Text(
@@ -107,7 +105,7 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 28.16),
+                const SizedBox(height: 28.16),
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 22,
@@ -126,7 +124,7 @@ class SignIn extends StatelessWidget {
                           width: 161.w,
                           height: 1.h,
                         ),
-                        SizedBox(width: 2.50),
+                        const SizedBox(width: 2.50),
                         const Text(
                           "OR",
                           textAlign: TextAlign.center,
@@ -135,7 +133,7 @@ class SignIn extends StatelessWidget {
                             fontSize: 10,
                           ),
                         ),
-                        SizedBox(width: 2.50),
+                        const SizedBox(width: 2.50),
                         Container(
                           color: Colors.black,
                           width: 161.w,
@@ -145,7 +143,7 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 28.16),
+                const SizedBox(height: 28.16),
                 Padding(
                   padding: const EdgeInsets.only(left: 22,right: 22),
                   child: Container(
@@ -154,7 +152,7 @@ class SignIn extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: Color(0xff2f363d),
+                        color:const Color(0xff2f363d),
                         width: 1,
                       ),
                       boxShadow: const [
@@ -168,7 +166,7 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.23),
+                const SizedBox(height: 20.23),
                 SizedBox(
                   width: 346.w,
                   height: 54.84.h,
@@ -180,7 +178,7 @@ class SignIn extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: Color(0xff3b3e51),
+                            color:const Color(0xff3b3e51),
                             width: 1,
                           ),
                           boxShadow: const [
@@ -190,7 +188,7 @@ class SignIn extends StatelessWidget {
                               offset: Offset(0, 4),
                             ),
                           ],
-                          color: Color(0x003b3d51),
+                          color:const Color(0x003b3d51),
                         ),
                         child: Stack(
                           children: [
@@ -221,7 +219,7 @@ class SignIn extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                 ),
-                                child: FlutterLogo(size: 34),
+                                child: const FlutterLogo(size: 34),
                               ),
                             ),
                           ],
