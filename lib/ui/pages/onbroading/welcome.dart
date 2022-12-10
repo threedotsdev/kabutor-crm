@@ -60,14 +60,9 @@ class Welcome extends StatelessWidget {
             SizedBox(
               height: 34.h,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Button(
-                text: "LET’S GET STARTED",
-                ontap: () {
-                  Get.to(const SignIn());
-                },
-              ),
+            Button(ontap: () {  }, text: '',),
+            const SizedBox(
+              height: 20,
             ),
             SizedBox(
               width: 390.w,
