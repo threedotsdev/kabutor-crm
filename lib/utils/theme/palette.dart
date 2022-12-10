@@ -1,4 +1,4 @@
-import '../packages.dart';
+import '../../packages.dart';
 
 class Palette {
   static const Color scaffold = Color(0xFFEDEDED);
@@ -9,6 +9,8 @@ class Palette {
   static const Color redColor = Color(0xffFF6767);
 
   static const LinearGradient scaffoldGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
     colors: [
       Color(0xFFFFFFFF),
       Color(0xFFF5FFFD),

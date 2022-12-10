@@ -60,7 +60,7 @@ class Welcome extends StatelessWidget {
             SizedBox(
               height: 34.h,
             ),
-            const Button(),
+            Button(ontap: () {  }, text: '',),
             const SizedBox(
               height: 20,
             ),
@@ -75,4 +75,3 @@ class Welcome extends StatelessWidget {
     );
   }
 }
-

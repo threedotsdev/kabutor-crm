@@ -1,4 +1,4 @@
-
+import 'package:kabutor/ui/pages/auth/forgotpass.dart';
 
 import '../../../packages.dart';
 
@@ -13,23 +13,8 @@ class SignIn extends StatelessWidget {
     );
     return Scaffold(
       body: SingleChildScrollView(
-        child: SafeArea(
-          child: Container(
-            width: 390.w,
-            height: 844.h,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white,
-                  Color(0xfff4fffc),
-                  Color(0xffeaf6f5),
-                  Color(0xffdbeeec),
-                  Color(0xffcafff4),
-                ],
-              ),
-            ),
+        child: ScaffoldBackgound(
+          child: SafeArea(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -78,28 +63,33 @@ class SignIn extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 22, right: 22),
-                  child: Container(
-                    height: 54.84.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x3f000000),
-                          blurRadius: 4,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                      color:const Color(0xff00a784),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "CONTINUE",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          //fontFamily: "Lato",
-                          //fontWeight: FontWeight.w800,
+                  child: InkWell(
+                    onTap: (){
+                      Get.to(const ForgotPass());
+                    },
+                    child: Container(
+                      height: 54.84.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3f000000),
+                            blurRadius: 4,
+                            offset: Offset(0, 4),
+                          ),
+                        ],
+                        color: const Color(0xff00a784),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "CONTINUE",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            //fontFamily: "Lato",
+                            //fontWeight: FontWeight.w800,
+                          ),
                         ),
                       ),
                     ),
@@ -145,14 +135,14 @@ class SignIn extends StatelessWidget {
                 ),
                 const SizedBox(height: 28.16),
                 Padding(
-                  padding: const EdgeInsets.only(left: 22,right: 22),
+                  padding: const EdgeInsets.only(left: 22, right: 22),
                   child: Container(
                     width: 346.w,
                     height: 54.84.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color:const Color(0xff2f363d),
+                        color: const Color(0xff2f363d),
                         width: 1,
                       ),
                       boxShadow: const [
@@ -164,68 +154,57 @@ class SignIn extends StatelessWidget {
                       ],
                       //color: Palette.themeColor,
                     ),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 51.w,
+                        ),
+                        Image.asset(
+                          'assets/icons/phonelogo.png',
+                          height: 34,
+                          width: 34,
+                        ),
+                        SizedBox(
+                          width: 80.w,
+                        ),
+                        Image.asset('assets/images/phone.png'),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20.23),
-                SizedBox(
-                  width: 346.w,
-                  height: 54.84.h,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 346,
-                        height: 54.84,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(
-                            color:const Color(0xff3b3e51),
-                            width: 1,
-                          ),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x3f000000),
-                              blurRadius: 4,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                          color:const Color(0x003b3d51),
-                        ),
-                        child: Stack(
-                          children: [
-                            const Positioned.fill(
-                              child: Align(
-                                alignment: Alignment.centerRight,
-                                child: SizedBox(
-                                  width: 317.14,
-                                  height: 29.42,
-                                  child: Text(
-                                    "Google",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: "Lato",
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 29,
-                              top: 9.93,
-                              child: Container(
-                                width: 34,
-                                height: 34,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const FlutterLogo(size: 34),
-                              ),
-                            ),
-                          ],
-                        ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 22, right: 22),
+                  child: Container(
+                    width: 346.w,
+                    height: 54.84.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: const Color(0xff2f363d),
+                        width: 1,
                       ),
-                    ],
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x3f000000),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                      //color: Colors.transparent,
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 51.w,
+                        ),
+                        Image.asset('assets/icons/googleicon.png'),
+                        SizedBox(
+                          width: 80.w,
+                        ),
+                        Image.asset('assets/images/google.png'),
+                      ],
+                    ),
                   ),
                 ),
               ],

@@ -1,20 +1,19 @@
-
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import '../../../packages.dart';
 
 class Button extends StatelessWidget {
-  const Button({
+  String text;
+  VoidCallback ontap;
+  Button({
     Key? key,
+    required this.text,
+    required this.ontap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(
-      context,
-      designSize: const Size(390, 844),
-    );
     return Container(
-      width: 346.w,
-      height: 54.84.h,
+      width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         boxShadow: const [
@@ -27,17 +26,15 @@ class Button extends StatelessWidget {
         color: const Color(0xff00a784),
       ),
       child: TextButton(
-        onPressed: () {
-          Get.to(const SignIn());
-        },
-        child: const Text(
-          "LET’S GET STARTED",
+        onPressed: ontap,
+        child: Text(
+          text,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: 20,
             //fontFamily: "Lato",
-            //fontWeight: FontWeight.w800,
+            fontWeight: FontWeight.w800,
           ),
         ),
       ),
