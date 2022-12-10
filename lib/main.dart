@@ -1,4 +1,3 @@
-
 import 'packages.dart';
 
 void main() async {
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.latoTextTheme(),
       ),
-      home: const Welcome2(),
+      home: const Welcome(),
       debugShowCheckedModeBanner: false,
     );
   }

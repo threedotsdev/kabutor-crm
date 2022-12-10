@@ -1,4 +1,5 @@
 import '../../../packages.dart';
+
 class ScaffoldBackgound extends StatelessWidget {
   final Widget? child;
   const ScaffoldBackgound({
@@ -13,8 +14,8 @@ class ScaffoldBackgound extends StatelessWidget {
       designSize: const Size(390, 844),
     );
     return Container(
-      height: 844.h,
-      width: 390.w,
+        height: Get.height,
+        width: Get.width,
         decoration: const BoxDecoration(gradient: Palette.scaffoldGradient),
         child: child);
   }

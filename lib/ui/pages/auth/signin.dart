@@ -1,5 +1,3 @@
-import 'package:kabutor/ui/pages/auth/forgotpass.dart';
-
 import '../../../packages.dart';
 
 class SignIn extends StatelessWidget {
@@ -62,39 +60,13 @@ class SignIn extends StatelessWidget {
                   height: 20.h,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 22, right: 22),
-                  child: InkWell(
-                    onTap: (){
-                      Get.to(const ForgotPass());
-                    },
-                    child: Container(
-                      height: 54.84.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x3f000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                          ),
-                        ],
-                        color: const Color(0xff00a784),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "CONTINUE",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            //fontFamily: "Lato",
-                            //fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                    padding: const EdgeInsets.only(left: 22, right: 22),
+                    child: Button(
+                      ontap: () {
+                        Get.to(const ForgotPass());
+                      },
+                      text: 'CONTINUE',
+                    )),
                 const SizedBox(height: 28.16),
                 Padding(
                   padding: const EdgeInsets.only(
@@ -174,7 +146,7 @@ class SignIn extends StatelessWidget {
                 ),
                 const SizedBox(height: 20.23),
                 Padding(
-                  padding: const EdgeInsets.only(left: 22, right: 22),
+                  padding: const EdgeInsets.symmetric(horizontal: 22),
                   child: Container(
                     width: 346.w,
                     height: 54.84.h,

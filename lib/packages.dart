@@ -12,5 +12,6 @@ export 'utils/constans.dart';
 export '/ui/shared/widgets/custom_button.dart';
 export 'ui/shared/widgets/Sscaffold_backgound.dart';
 export 'ui/pages/auth/signin.dart';
+export 'package:kabutor/ui/pages/auth/forgotpass.dart';
 
-export './ui/pages/onbroading/welcome2.dart';
+export 'ui/pages/onbroading/welcome.dart';
