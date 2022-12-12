@@ -29,6 +29,7 @@ class Welcome extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Button(
+                    colors: const Color(0xff00A784),
                     text: "LET'S GET STARTED",
                     ontap: () {
                       Get.to(const SignIn());

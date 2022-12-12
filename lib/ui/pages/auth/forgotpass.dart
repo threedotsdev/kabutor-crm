@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:kabutor/packages.dart';
+import 'package:kabutor/ui/pages/auth/verifacition_page.dart';
 
 class ForgotPass extends StatelessWidget {
   const ForgotPass({super.key});
@@ -81,32 +80,14 @@ class ForgotPass extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Container(
-                          width: 346.w,
-                          height: 54.84.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x3f000000),
-                                blurRadius: 4,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                            color: const Color(0xffff6868),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "CONTINUE",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.sp,
-                                //fontFamily: "Lato",
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                          ),
+                        Button(
+                          colors: const Color(0xffFF6868),
+                          text: 'Continue',
+                          ontap: () {
+                            Get.to(
+                              const VerifacitionPage(),
+                            );
+                          },
                         ),
                         SizedBox(height: 7.16.h),
                         Text(
@@ -130,7 +111,9 @@ class ForgotPass extends StatelessWidget {
                     height: 1.h,
                     color: Palette.darkLightColor,
                   ),
-                  Image.asset('assets/images/forgate.png')
+                  Expanded(
+                    child: Image.asset('assets/images/forgate.png'),
+                  ),
                 ],
               ),
             ),

@@ -4,10 +4,12 @@ import '../../../packages.dart';
 class Button extends StatelessWidget {
   String text;
   VoidCallback ontap;
+  dynamic colors;
   Button({
     Key? key,
     required this.text,
     required this.ontap,
+    required this.colors,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class Button extends StatelessWidget {
             offset: Offset(0, 4),
           ),
         ],
-        color: const Color(0xff00a784),
+        color: colors,
       ),
       child: TextButton(
         onPressed: ontap,
