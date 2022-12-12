@@ -138,8 +138,12 @@ class VerifacitionPage extends StatelessWidget {
                 ),
                 Button(
                   text: 'VERIFY',
-                  ontap: () {},
-                  colors:const Color(0xffFF6868),
+                  ontap: () {
+                    Get.to(
+                      const CreateNewAccount(),
+                    );
+                  },
+                  colors: const Color(0xffFF6868),
                 ),
                 SizedBox(
                   height: 21.h,
@@ -147,7 +151,7 @@ class VerifacitionPage extends StatelessWidget {
                 Button(
                   text: 'CANCEL',
                   ontap: () {},
-                  colors:const Color(0xff2F363D),
+                  colors: const Color(0xff2F363D),
                 ),
               ],
             ),

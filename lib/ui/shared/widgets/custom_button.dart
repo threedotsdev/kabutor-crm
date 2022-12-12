@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
 import '../../../packages.dart';
 
 class Button extends StatelessWidget {
@@ -15,7 +15,8 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      height: 55.h,
+      width: 346.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         boxShadow: const [

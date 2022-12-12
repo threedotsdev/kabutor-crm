@@ -32,7 +32,7 @@ class SignIn extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Hello World\n",
+                      "Kabutor",
                       style: TextStyle(
                         color: const Color(0xff00a784),
                         fontSize: 16.sp,
@@ -43,6 +43,7 @@ class SignIn extends StatelessWidget {
                     SizedBox(height: 108.h),
                     TextFormField(
                       decoration: const InputDecoration(
+                        focusColor: Color(0xff00A784),
                         labelText: 'Email',
                         border: OutlineInputBorder(),
                       ),
@@ -51,7 +52,7 @@ class SignIn extends StatelessWidget {
                       height: 20.h,
                     ),
                     Button(
-                      colors:const Color(0xff00A784),
+                      colors: const Color(0xff00A784),
                       ontap: () {
                         Get.to(const ForgotPass());
                       },
@@ -96,12 +97,13 @@ class SignIn extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
-                          color: const Color(0xff2f363d),
+                          // color: const Color(0xff2f363d),
                           width: 1,
                         ),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x3f000000),
+                            color: Colors.transparent,
+                            //color: Color(0x3f000000),
                             blurRadius: 4,
                             offset: Offset(0, 4),
                           ),
@@ -137,7 +139,8 @@ class SignIn extends StatelessWidget {
                         ),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x3f000000),
+                            color: Colors.transparent,
+                            // color: Color(0x3f000000),
                             blurRadius: 4,
                             offset: Offset(0, 4),
                           ),
