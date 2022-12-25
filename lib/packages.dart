@@ -15,5 +15,6 @@ export 'ui/pages/auth/signin.dart';
 export 'package:kabutor/ui/pages/auth/forgotpass.dart';
 export 'ui/pages/auth/verifacition_page.dart';
 export 'ui/pages/auth/newaccount_page.dart';
+export 'ui/pages/auth/signin_pass_authscreen.dart';
 
 export 'ui/pages/onbroading/welcome.dart';

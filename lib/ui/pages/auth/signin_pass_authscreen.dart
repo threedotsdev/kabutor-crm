@@ -1,9 +1,7 @@
 import '../../../packages.dart';
 
-class SignIn extends StatelessWidget {
-  const SignIn({super.key});
-
-  
+class SignInPass extends StatelessWidget {
+  const SignInPass({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +9,10 @@ class SignIn extends StatelessWidget {
       context,
       designSize: const Size(390, 844),
     );
-    var formkey= GlobalKey<FormState>();
-    var emailController= TextEditingController();
+    var formkey = GlobalKey<FormState>();
+    var passwordController = TextEditingController();
+    var isObsecure = true.obs;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: ScaffoldBackgound(
@@ -27,7 +27,7 @@ class SignIn extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Log in or Sing up",
+                      "Welcome",
                       style: TextStyle(
                         color: const Color(0xff2f363d),
                         fontSize: 25.sp,
@@ -47,13 +47,30 @@ class SignIn extends StatelessWidget {
                     SizedBox(height: 108.h),
                     Form(
                       key: formkey,
-                      child: TextFormField(
-                        controller: emailController,
-                        validator: (value) => value==""?"Please Write Email":null,
-                        decoration: const InputDecoration(
-                          focusColor: Color(0xff00A784),
-                          labelText: 'Email',
-                          border: OutlineInputBorder(),
+                      child: Obx(
+                        () => TextFormField(
+                          controller: passwordController,
+                          obscureText: isObsecure.value,
+                          validator: (value) =>
+                              value == "" ? "Please Write Password" : null,
+                          decoration: InputDecoration(
+                            focusColor: const Color(0xff00A784),
+                            labelText: 'Password',
+                            border: const OutlineInputBorder(),
+                            suffixIcon: Obx(
+                              () => GestureDetector(
+                                onTap: () {
+                                  isObsecure.value = !isObsecure.value;
+                                },
+                                child: Icon(
+                                  isObsecure.value
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                  color: const Color(0xff00A784),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -63,9 +80,28 @@ class SignIn extends StatelessWidget {
                     Button(
                       colors: const Color(0xff00A784),
                       ontap: () {
-                        Get.to(const SignInPass());
+                        Get.to(const ForgotPass());
                       },
                       text: 'CONTINUE',
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.only(left: 211),
+                      child: TextButton(
+                        onPressed: () {
+                          Get.to(const ForgotPass());
+                        },
+                        child: const Text(
+                          "FORGET PASSWORD?",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xffff6767),
+                            fontSize: 12,
+                            fontFamily: "Lato",
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 28.16),
                     SizedBox(
