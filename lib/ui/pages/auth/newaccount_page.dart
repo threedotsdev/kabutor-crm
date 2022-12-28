@@ -1,3 +1,5 @@
+import 'package:kabutor/ui/pages/auth/varification_page.dart';
+
 import '../../../packages.dart';
 
 class CreateNewAccount extends StatelessWidget {
@@ -101,7 +103,9 @@ class CreateNewAccount extends StatelessWidget {
                   ),
                   Button(
                     text: 'Continue',
-                    ontap: () {},
+                    ontap: () {
+                      Get.to(const VerifacitionPage());
+                    },
                     colors: const Color(0xff00A784),
                   ),
                 ],

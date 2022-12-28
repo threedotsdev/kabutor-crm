@@ -3,16 +3,14 @@ import '../../../packages.dart';
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
 
-  
-
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(
       context,
       designSize: const Size(390, 844),
     );
-    var formkey= GlobalKey<FormState>();
-    var emailController= TextEditingController();
+    var formkey = GlobalKey<FormState>();
+    var emailController = TextEditingController();
     return Scaffold(
       body: SingleChildScrollView(
         child: ScaffoldBackgound(
@@ -49,7 +47,8 @@ class SignIn extends StatelessWidget {
                       key: formkey,
                       child: TextFormField(
                         controller: emailController,
-                        validator: (value) => value==""?"Please Write Email":null,
+                        validator: (value) =>
+                            value == "" ? "Please Write Email" : null,
                         decoration: const InputDecoration(
                           focusColor: Color(0xff00A784),
                           labelText: 'Email',
@@ -63,7 +62,9 @@ class SignIn extends StatelessWidget {
                     Button(
                       colors: const Color(0xff00A784),
                       ontap: () {
-                        Get.to(const SignInPass());
+                        Get.to(
+                          const SignInPass(),
+                        );
                       },
                       text: 'CONTINUE',
                     ),

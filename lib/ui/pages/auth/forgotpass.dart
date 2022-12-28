@@ -1,5 +1,5 @@
 import 'package:kabutor/packages.dart';
-import 'package:kabutor/ui/pages/auth/verifacition_page.dart';
+
 
 class ForgotPass extends StatelessWidget {
   const ForgotPass({super.key});
@@ -85,7 +85,7 @@ class ForgotPass extends StatelessWidget {
                           text: 'Continue',
                           ontap: () {
                             Get.to(
-                              const VerifacitionPage(),
+                              const VerifacitionForgotPassPage(),
                             );
                           },
                         ),

@@ -80,7 +80,7 @@ class SignInPass extends StatelessWidget {
                     Button(
                       colors: const Color(0xff00A784),
                       ontap: () {
-                        Get.to(const ForgotPass());
+                        Get.to(const CreateNewAccount());
                       },
                       text: 'CONTINUE',
                     ),
