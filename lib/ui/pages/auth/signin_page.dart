@@ -48,7 +48,8 @@ class SignIn extends StatelessWidget {
                       child: TextFormField(
                         controller: emailController,
                         validator: (value) =>
-                            value == "" ? "Please Write Email" : null,
+                        value.toString().isEmail?"Please Write Email" : null,
+                           // value == "" ? "Please Write Email" : null,
                         decoration: const InputDecoration(
                           focusColor: Color(0xff00A784),
                           labelText: 'Email',
@@ -62,9 +63,11 @@ class SignIn extends StatelessWidget {
                     Button(
                       colors: const Color(0xff00A784),
                       ontap: () {
-                        Get.to(
-                          const SignInPass(),
-                        );
+                        if (formkey.currentState!.validate()) {
+                          Get.to(()=>
+                            const SignInPass(),
+                          );
+                        }
                       },
                       text: 'CONTINUE',
                     ),

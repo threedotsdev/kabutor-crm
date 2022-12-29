@@ -52,7 +52,7 @@ class SignInPass extends StatelessWidget {
                           controller: passwordController,
                           obscureText: isObsecure.value,
                           validator: (value) =>
-                              value == "" ? "Please Write Password" : null,
+                              value.toString().length <=6 ? " Password Should be More Then 6" : null,
                           decoration: InputDecoration(
                             focusColor: const Color(0xff00A784),
                             labelText: 'Password',
@@ -80,11 +80,12 @@ class SignInPass extends StatelessWidget {
                     Button(
                       colors: const Color(0xff00A784),
                       ontap: () {
-                        Get.to(const CreateNewAccount());
+                        if (formkey.currentState!.validate()) {
+                          Get.to(() => const CreateNewAccount());
+                        }
                       },
                       text: 'CONTINUE',
                     ),
-                    
                     Padding(
                       padding: const EdgeInsets.only(left: 211),
                       child: TextButton(

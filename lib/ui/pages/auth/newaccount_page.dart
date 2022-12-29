@@ -7,6 +7,13 @@ class CreateNewAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var formkey = GlobalKey<FormState>();
+    var nameController = TextEditingController();
+    var comapnyController = TextEditingController();
+    var emailController = TextEditingController();
+    var passwordController = TextEditingController();
+    var dateController = TextEditingController();
+    var addressController = TextEditingController();
     return Scaffold(
       body: SingleChildScrollView(
         child: ScaffoldBackgound(
@@ -30,9 +37,9 @@ class CreateNewAccount extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Cobutor",
+                    "Kobutor",
                     style: TextStyle(
-                      color: const Color(0xff00a784),
+                      color: Palette.themeColor,
                       fontSize: 16.sp,
                       fontFamily: "Lato",
                       fontWeight: FontWeight.w600,
@@ -41,72 +48,101 @@ class CreateNewAccount extends StatelessWidget {
                   SizedBox(
                     height: 30.h,
                   ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      focusColor: Color(0xff00A784),
-                      labelText: 'Name',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      focusColor: Color(0xff00A784),
-                      labelText: 'Company name',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      focusColor: Color(0xff00A784),
-                      labelText: 'Email ID',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      focusColor: Color(0xff00A784),
-                      labelText: 'Password',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      focusColor: Color(0xff00A784),
-                      labelText: 'Date of birth',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Address',
-                      focusColor: Color(0xff00A784),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
+                  Form(
+                      key: formkey,
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            validator: (value) => value.toString().length <= 4
+                                ? "Name Should Be Minimum 4 Letter"
+                                : null,
+                            controller: nameController,
+                            decoration: const InputDecoration(
+                              focusColor: Palette.themeColor,
+                              labelText: 'Name',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          TextFormField(
+                            validator: (value) => value.toString().length <= 4
+                                ? "Name Should Be Minimum 4 Letter"
+                                : null,
+                            controller: comapnyController,
+                            decoration: const InputDecoration(
+                              focusColor: Palette.themeColor,
+                              labelText: 'Company name',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          TextFormField(
+                            validator: (value) => value.toString().length <=5
+                                ? "Enter Your Name"
+                                : null,
+                            controller: emailController,
+                            decoration: const InputDecoration(
+                              focusColor: Palette.themeColor,
+                              labelText: 'Email ID',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          TextFormField(
+                            validator: (value) => value.toString().length <= 6
+                                ? "Password Should Be Minimum 6 Letter"
+                                : null,
+                            controller: passwordController,
+                            decoration: const InputDecoration(
+                              focusColor: Color(0xff00A784),
+                              labelText: 'Password',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          TextFormField(
+                            validator: (value) => value.toString().isDateTime
+                                ? "Enter Your Date Of Birth"
+                                : null,
+                            controller: dateController,
+                            decoration: const InputDecoration(
+                              labelText: 'Date Of Birth',
+                              focusColor: Palette.themeColor,
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          TextFormField(
+                            controller: addressController,
+                            decoration: const InputDecoration(
+                              labelText: 'Address',
+                              focusColor: Palette.themeColor,
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                        ],
+                      )),
                   SizedBox(
                     height: 39.h,
                   ),
                   Button(
                     text: 'Continue',
                     ontap: () {
-                      Get.to(const VerifacitionPage());
+                      if (formkey.currentState!.validate()) {
+                        Get.to(() => const VerifacitionPage());
+                      }
                     },
-                    colors: const Color(0xff00A784),
+                    colors: Palette.themeColor,
                   ),
                 ],
               ),
