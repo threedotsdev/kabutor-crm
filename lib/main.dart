@@ -1,3 +1,5 @@
+import 'package:kabutor/core/services/auth_page.dart';
+
 import 'packages.dart';
 
 void main() async {
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.latoTextTheme(),
       ),
-      home: const Welcome(),
+      home: const AuthPage(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -51,8 +51,9 @@ class SignInPass extends StatelessWidget {
                         () => TextFormField(
                           controller: passwordController,
                           obscureText: isObsecure.value,
-                          validator: (value) =>
-                              value.toString().length <=6 ? " Password Should be More Then 6" : null,
+                          validator: (value) => value.toString().length <= 6
+                              ? " Password Should be More Then 6"
+                              : null,
                           decoration: InputDecoration(
                             focusColor: const Color(0xff00A784),
                             labelText: 'Password',
@@ -174,37 +175,10 @@ class SignInPass extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20.23),
-                    Container(
-                      width: 346.w,
-                      height: 54.84.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: const Color(0xff2f363d),
-                          width: 1,
-                        ),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.transparent,
-                            // color: Color(0x3f000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                          ),
-                        ],
-                        //color: Colors.transparent,
-                      ),
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 51.w,
-                          ),
-                          Image.asset('assets/icons/googleicon.png'),
-                          SizedBox(
-                            width: 80.w,
-                          ),
-                          Image.asset('assets/images/google.png'),
-                        ],
-                      ),
+                    GoogleAuthButton(
+                      onTap: () {
+                        AuthServies().signWithGoogle();
+                      },
                     ),
                   ]),
             ),
