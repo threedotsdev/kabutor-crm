@@ -13,7 +13,7 @@ export 'utils/theme/palette.dart';
 export 'ui/shared/widgets/kabutor_logo.dart';
 export 'utils/constans.dart';
 export '/ui/shared/widgets/custom_button.dart';
-export 'ui/shared/widgets/Sscaffold_backgound.dart';
+export 'ui/shared/widgets/scaffold_backgound.dart';
 export 'ui/pages/auth/signin_page.dart';
 export 'package:kabutor/ui/pages/auth/forgotpass_page.dart';
 export 'ui/pages/auth/verifacition_forgot_pass_page.dart';
