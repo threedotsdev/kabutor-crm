@@ -19,7 +19,7 @@ export 'package:kabutor/ui/pages/auth/forgotpass_page.dart';
 export 'ui/pages/auth/verifacition_forgot_pass_page.dart';
 export 'ui/pages/auth/newaccount_page.dart';
 export 'ui/pages/auth/password_page.dart';
-export 'ui/pages/Home_page.dart';
+export 'ui/pages/home_page.dart';
 export 'ui/shared/widgets/google_auth_button.dart';
 export 'core/services/auth_page.dart';
 export 'core/services/auth_service.dart';
