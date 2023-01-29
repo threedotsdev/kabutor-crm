@@ -17,5 +17,7 @@ export 'package:kabutor/ui/pages/auth/forgotpass_page.dart';
 export 'ui/pages/auth/verifacition_forgot_pass_page.dart';
 export 'ui/pages/auth/newaccount_page.dart';
 export 'ui/pages/auth/password_page.dart';
+export 'ui/pages/ui/home_page.dart';
+export 'core/controllers/navigationtab_controller.dart';
 
 export 'ui/pages/onbroading/welcome_page.dart';

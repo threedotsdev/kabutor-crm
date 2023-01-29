@@ -22,7 +22,7 @@ class ForgotPass extends StatelessWidget {
                   Text(
                     "Don’t Worry",
                     style: TextStyle(
-                      color: const Color(0xff2f363d),
+                      color: Palette.darkLightColor,
                       fontSize: 25.sp,
                       //fontFamily: "Lato",
                       fontWeight: FontWeight.w700,
@@ -31,7 +31,7 @@ class ForgotPass extends StatelessWidget {
                   Text(
                     "We are here to help",
                     style: TextStyle(
-                      color: const Color(0xff00a784),
+                      color: Palette.themeColor,
                       fontSize: 16.sp,
                       //fontFamily: "Lato",
                       fontWeight: FontWeight.w600,
@@ -43,7 +43,7 @@ class ForgotPass extends StatelessWidget {
                   Text(
                     "Get a verification code",
                     style: TextStyle(
-                      color: const Color(0xffff6767),
+                      color: Palette.redColor,
                       fontSize: 20.sp,
                       //fontFamily: "Lato",
                       fontWeight: FontWeight.w700,
@@ -55,7 +55,7 @@ class ForgotPass extends StatelessWidget {
                   Text(
                     "To get a verification code, first confirm your Email Address / Phone Number to your account ******** ",
                     style: TextStyle(
-                      color: const Color(0xff8d8e8f),
+                      color: Palette.greyColor,
                       fontSize: 10.sp,
                       letterSpacing: 0.15,
                     ),
@@ -81,7 +81,7 @@ class ForgotPass extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Button(
-                          colors: const Color(0xffFF6868),
+                          colors: Palette.redColor,
                           text: 'Continue',
                           ontap: () {
                             Get.to(
@@ -93,7 +93,7 @@ class ForgotPass extends StatelessWidget {
                         Text(
                           "Follow the step to recover your ID.",
                           style: TextStyle(
-                            color: const Color(0xff8d8e8f),
+                            color: Palette.greyColor,
                             fontSize: 12.sp,
                             //fontFamily: "Lato",
                             fontWeight: FontWeight.w700,

@@ -1,4 +1,5 @@
 import 'package:kabutor/packages.dart';
+import 'package:kabutor/ui/pages/auth/term&condition_page.dart';
 
 class VerifacitionPage extends StatelessWidget {
   const VerifacitionPage({super.key});
@@ -74,27 +75,27 @@ class VerifacitionPage extends StatelessWidget {
                   onSubmit: (String verificationCode) {}, // end onSubmit
                 ),
                 
-                Padding(
-                  padding: const EdgeInsets.only(left: 200),
-                  child: Row(
-                    children: [
-                      Text(
-                        "Didn’t get a code?",
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                        ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Didn’t get a code?",
+                      style: TextStyle(
+                        fontSize: 12.sp,
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text('Resend'),
-                      ),
-                    ],
-                  ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Resend'),
+                    ),
+                  ],
                 ),
                 
                 Button(
                   text: 'VERIFY',
-                  ontap: () {},
+                  ontap: () {
+                    Get.to(()=>const TermCondition());
+                  },
                   colors: const Color(0xff00a784),
                 ),
                 SizedBox(

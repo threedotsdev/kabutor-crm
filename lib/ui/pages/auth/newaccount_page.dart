@@ -30,7 +30,7 @@ class CreateNewAccount extends StatelessWidget {
                   Text(
                     "Create New Account",
                     style: TextStyle(
-                      color: const Color(0xff2f363d),
+                      color: Palette.darkLightColor,
                       fontSize: 25.sp,
                       fontFamily: "Lato",
                       fontWeight: FontWeight.w700,
@@ -100,7 +100,7 @@ class CreateNewAccount extends StatelessWidget {
                                 : null,
                             controller: passwordController,
                             decoration: const InputDecoration(
-                              focusColor: Color(0xff00A784),
+                              focusColor: Palette.themeColor,
                               labelText: 'Password',
                               border: OutlineInputBorder(),
                             ),
