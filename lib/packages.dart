@@ -19,5 +19,7 @@ export 'ui/pages/auth/newaccount_page.dart';
 export 'ui/pages/auth/password_page.dart';
 export 'ui/pages/ui/home_page.dart';
 export 'core/controllers/navigationtab_controller.dart';
+export 'ui/shared/widgets/uiwidget/contact_card.dart';
+export 'ui/shared/widgets/uiwidget/contact_Listtile.dart';
 
 export 'ui/pages/onbroading/welcome_page.dart';

@@ -51,8 +51,8 @@ class SignInPass extends StatelessWidget {
                         () => TextFormField(
                           controller: passwordController,
                           obscureText: isObsecure.value,
-                          validator: (value) =>
-                              value.toString().length <=6 ? " Password Should be More Then 6" : null,
+                          //validator: (value) =>
+                             // value.toString().length <=6 ? " Password Should be More Then 6" : null,
                           decoration: InputDecoration(
                             focusColor: const Color(0xff00A784),
                             labelText: 'Password',

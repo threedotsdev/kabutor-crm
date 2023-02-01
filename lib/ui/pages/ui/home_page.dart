@@ -1,19 +1,22 @@
 import 'package:kabutor/packages.dart';
+import 'package:kabutor/ui/pages/ui/contact_screen.dart';
+import 'package:kabutor/ui/pages/ui/home_screen.dart';
+import 'package:kabutor/ui/pages/ui/note_screen.dart';
 
+// ignore: must_be_immutable
 class Home extends StatelessWidget {
   BottomnavigationController bottomnavigationController =
       Get.put(BottomnavigationController());
   Home({super.key});
   final screen = [
-    const Text('Index 0: Home'),
-    const Text('Index 1: Business'),
-    const Text('Index 2: School'),
+    const HomeScreen(),
+    const ContactScreen(),
+    const NoteScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Obx(
         () => IndexedStack(
           index: bottomnavigationController.currentIndex.value,
