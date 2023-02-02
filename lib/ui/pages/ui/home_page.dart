@@ -17,10 +17,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => IndexedStack(
-          index: bottomnavigationController.currentIndex.value,
-          children: screen,
+      body: ScaffoldBackgound(
+        child: Obx(
+          () => IndexedStack(
+            index: bottomnavigationController.currentIndex.value,
+            children: screen,
+          ),
         ),
       ),
       bottomNavigationBar: Obx(
