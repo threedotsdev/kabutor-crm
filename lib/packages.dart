@@ -22,5 +22,6 @@ export 'core/controllers/navigationtab_controller.dart';
 export 'ui/shared/widgets/uiwidget/contact_card.dart';
 export 'ui/shared/widgets/uiwidget/contact_Listtile.dart';
 export 'ui/shared/widgets/uiwidget/date_card.dart';
+export 'ui/pages/ui/create_contact_screen.dart';
 
 export 'ui/pages/onbroading/welcome_page.dart';

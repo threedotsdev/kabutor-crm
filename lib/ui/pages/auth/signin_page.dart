@@ -1,26 +1,34 @@
 import '../../../packages.dart';
 
-class SignIn extends StatelessWidget {
+class SignIn extends StatefulWidget {
   const SignIn({super.key});
 
   @override
+  State<SignIn> createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
+  static GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  var emailController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+   // var formkey = GlobalKey<FormState>();
     ScreenUtil.init(
       context,
       designSize: const Size(390, 844),
     );
-    var formkey = GlobalKey<FormState>();
-    var emailController = TextEditingController();
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: ScaffoldBackgound(
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                top: 39,
-                left: 22,
-                right: 22,
-              ),
+
+    
+    return SafeArea(
+      child: Scaffold(
+        body: ScaffoldBackgound(
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 39,
+              left: 22,
+              right: 22,
+            ),
+            child: SingleChildScrollView(
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -36,7 +44,7 @@ class SignIn extends StatelessWidget {
                     Text(
                       "Kabutor",
                       style: TextStyle(
-                        color: const Color(0xff00a784),
+                        color: Palette.themeColor,
                         fontSize: 16.sp,
                         fontFamily: "Lato",
                         fontWeight: FontWeight.w600,
@@ -45,31 +53,36 @@ class SignIn extends StatelessWidget {
                     SizedBox(height: 108.h),
                     Form(
                       key: formkey,
-                      child: TextFormField(
-                        controller: emailController,
-                        validator: (value) =>
-                        value.toString().isEmail?"Please Write Email" : null,
-                           // value == "" ? "Please Write Email" : null,
-                        decoration: const InputDecoration(
-                          focusColor: Color(0xff00A784),
-                          labelText: 'Email',
-                          border: OutlineInputBorder(),
-                        ),
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            controller: emailController,
+                            validator: (value) => value.toString().length <= 4
+                                ? "Name Should Be Minimum 4 Letter"
+                                : null,
+                            // value == "" ? "Please Write Email" : null,
+                            decoration: const InputDecoration(
+                              focusColor: Palette.themeColor,
+                              labelText: 'Email',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20.h,
+                          ),
+                          Button(
+                            colors: const Color(0xff00A784),
+                            ontap: () {
+                              if (formkey.currentState!.validate()) {
+                                Get.to(
+                                  () => const SignInPass(),
+                                );
+                              }
+                            },
+                            text: 'CONTINUE',
+                          ),
+                        ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 20.h,
-                    ),
-                    Button(
-                      colors: const Color(0xff00A784),
-                      ontap: () {
-                        if (formkey.currentState!.validate()) {
-                          Get.to(()=>
-                            const SignInPass(),
-                          );
-                        }
-                      },
-                      text: 'CONTINUE',
                     ),
                     const SizedBox(height: 28.16),
                     SizedBox(

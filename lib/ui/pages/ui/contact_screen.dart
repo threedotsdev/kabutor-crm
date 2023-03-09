@@ -1,4 +1,5 @@
 import 'package:kabutor/packages.dart';
+import 'package:kabutor/ui/pages/ui/create_contact_screen.dart';
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({super.key});
@@ -27,7 +28,12 @@ class ContactScreen extends StatelessWidget {
                       width: 133.w,
                       child: Row(
                         children: [
-                          const CircleAvatar(),
+                          InkWell(
+                            onTap: (){
+                              Get.to(()=>const CreateContact());
+                            },
+                            child:const CircleAvatar(),
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -104,8 +110,7 @@ class ContactScreen extends StatelessWidget {
                 width: double.maxFinite,
                 child: ListView.builder(
                   itemCount: 10,
-
-                  // scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.vertical,
                   itemBuilder: (BuildContext context, int index) {
                     return const ContactList();
                   },
