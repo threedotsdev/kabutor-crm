@@ -1,5 +1,5 @@
 import 'package:kabutor/packages.dart';
-import 'package:kabutor/ui/pages/ui/create_contact_screen.dart';
+
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({super.key});
@@ -12,7 +12,7 @@ class ContactScreen extends StatelessWidget {
     );
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.only(left: 14, right: 18),
+        padding:  EdgeInsets.only(left: 14.h, right: 18.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,10 +29,10 @@ class ContactScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           InkWell(
-                            onTap: (){
-                              Get.to(()=>const CreateContact());
+                            onTap: () {
+                              Get.to(() => const CreateContact());
                             },
-                            child:const CircleAvatar(),
+                            child: const CircleAvatar(),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,10 +44,14 @@ class ContactScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const Icon(
-                      Icons.notifications,
-                      color: Palette.themeColor,
-                    )
+                    IconButton(
+                        onPressed: () {
+                          Get.to(()=>const CreateContact());
+                        },
+                        icon: const Icon(
+                          Icons.add_circle,
+                          color: Palette.themeColor,
+                        ))
                   ],
                 ),
               ),
@@ -62,7 +66,7 @@ class ContactScreen extends StatelessWidget {
                 width: double.maxFinite,
                 height: 40.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10.r),
                   color: Palette.scaffold,
                   //const Color(0x19676b6f),
                 ),
@@ -88,9 +92,9 @@ class ContactScreen extends StatelessWidget {
                 child: GridView.builder(
                     scrollDirection: Axis.horizontal,
                     gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      mainAxisSpacing: 3,
-                      childAspectRatio: 7 / 9,
+                         SliverGridDelegateWithFixedCrossAxisCount(
+                      mainAxisSpacing: 3.h,
+                      childAspectRatio: 7 / 9.h,
                       crossAxisCount: 1,
                     ),
                     itemCount: 10,

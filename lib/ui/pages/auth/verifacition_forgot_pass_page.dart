@@ -97,7 +97,9 @@ class VerifacitionForgotPassPage extends StatelessWidget {
                 ),
                 Button(
                   text: 'VERIFY',
-                  ontap: () {},
+                  ontap: () {
+                    Get.to(()=>Home());
+                  },
                   colors: const Color(0xffFF6868),
                 ),
                 SizedBox(
